@@ -6,8 +6,6 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 
-@Setter
-@Getter
 @Entity(name = "tb_account")
 public class Account {
 
@@ -20,10 +18,29 @@ public class Account {
 
     private String agency;
 
-    @Column(scale = 13, precision = 2)
+    @Column(precision = 13, scale = 2)
     private BigDecimal balance;
 
-    @Column(name = "additional_limit", scale = 13, precision = 2)
+    @Column(name = "additional_limit", precision = 13, scale = 2)
     private BigDecimal limit;
 
+    public String getAgency() {
+        return agency;
+    }
+
+    public BigDecimal getBalance() {
+        return balance;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public BigDecimal getLimit() {
+        return limit;
+    }
+
+    public String getNumber() {
+        return number;
+    }
 }

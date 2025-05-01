@@ -1,13 +1,9 @@
 package kaique.luan.dev.domain.model;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
 
 import java.util.List;
 
-@Setter
-@Getter
 @Entity(name = "tb_user")
 public class User {
 
@@ -29,4 +25,27 @@ public class User {
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<News> news;
 
+    public Account getAccount() {
+        return account;
+    }
+
+    public Card getCard() {
+        return card;
+    }
+
+    public List<Feature> getFeatures() {
+        return features;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public List<News> getNews() {
+        return news;
+    }
 }
