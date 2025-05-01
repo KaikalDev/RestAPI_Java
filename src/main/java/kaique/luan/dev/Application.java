@@ -1,13 +1,14 @@
 package kaique.luan.dev;
 
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class RestApiJavaApplication {
+public class Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(RestApiJavaApplication.class, args);
+        SpringApplication.run(Application.class, args);
     }
 
 }
