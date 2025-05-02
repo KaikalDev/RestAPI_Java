@@ -19,12 +19,12 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public User findUserById(Long id) {
+    public User findById(Long id) {
         return userRepository.findById(id).orElseThrow(NoSuchElementException::new);
     }
 
     @Override
-    public User createUser(User userToCreate) {
+    public User create(User userToCreate) {
         if (userRepository.existsByAccountNumber(userToCreate.getAccount().getNumber())) {
             throw new IllegalArgumentException("This Account number already exists.");
         }

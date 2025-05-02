@@ -3,7 +3,7 @@ package kaique.luan.dev.service;
 import kaique.luan.dev.domain.model.User;
 
 public interface IUserService {
-    User findUserById(Long id);
+    User findById(Long id);
 
-    User createUser(User userToCreate);
+    User create(User userToCreate);
 }
